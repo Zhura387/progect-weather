@@ -1,0 +1,39 @@
+@import '../../../../Styles/Variables.scss';
+
+.thisDay {
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    background: $liteBackground;
+    box-shadow: $boxShadow;
+    border-radius: $borderRadius;
+}
+
+.topBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+
+    svg {
+        width: 119px;
+        height: 119px;
+    }
+}
+.thisDayTemp{
+    font-size: 96px;
+    font-weight: 500;
+    color: $primaryColor;
+}
+.thisDayData{
+    font-size: 40px;
+    color: $liteColor;
+}
+.bottomBlock{
+    .thisDayTime,
+    .thisDayCity{
+        color: $baceColor;
+        font-size: 25px;
+    }
+}
