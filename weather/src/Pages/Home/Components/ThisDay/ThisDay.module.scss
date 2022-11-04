@@ -4,7 +4,7 @@
     padding: 20px;
     max-width: 400px;
     width: 100%;
-    background: $liteBackground;
+    background-color: var(#{--components-background-default});
     box-shadow: $boxShadow;
     border-radius: $borderRadius;
 }
@@ -24,11 +24,11 @@
 .thisDayTemp{
     font-size: 96px;
     font-weight: 500;
-    color: $primaryColor;
+    color: var(#{--text-color-default});
 }
 .thisDayData{
     font-size: 40px;
-    color: $liteColor;
+    color: var(#{--text-color-default});
 }
 .bottomBlock{
     .thisDayTime,

@@ -2,7 +2,7 @@ import React from 'react';
 import s from './ThisDay.module.scss'
 const ThisDay = () => {
     return (
-        <header className={s.thisDay}>
+        <div className={s.thisDay}>
             <div className={s.topBlock}>
                 <div className={s.topBlockWrapper}>
                     <div className={s.thisDayTemp}>20</div>
@@ -25,7 +25,7 @@ const ThisDay = () => {
                 <div className={s.thisDayTime}>time:<span>21:54</span></div>
                 <div className={s.thisDayCity}><span>Minsk</span></div>
             </div>
-        </header>
+        </div>
     )
 }
 export default ThisDay

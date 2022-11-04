@@ -7,7 +7,7 @@ import Popup from './Pages/Shared header/Popup/Popup';
 function App() {
   return (
     <div className='globalConteiner'>
-      <Popup/>
+      {/* <Popup/> */}
       <div className='conteiner'>
         <Header />
         <Routes>

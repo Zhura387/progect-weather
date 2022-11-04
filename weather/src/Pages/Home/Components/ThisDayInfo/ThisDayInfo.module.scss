@@ -4,9 +4,8 @@
     padding: 40px;
     max-width: 750px;
     width: 100%;
-    background: $liteBackground;
+    background: var(#{--components-background-default});
     box-shadow: $boxShadow;
-    border-radius: $borderRadius;
 }
 .item{
     position: relative;
@@ -34,7 +33,7 @@
         color: $baceColor;
     }
     .indicatorValue{
-color: $liteColor;
+color: var(#{--text-color-default});
     }
 }
 .cloudImg{
