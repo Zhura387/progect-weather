@@ -1,15 +1,17 @@
 @import '../../../../Styles/Variables.scss';
-.days{display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-padding: 20px;
-width: 100%;
-background: $liteBackground;
-box-shadow: $boxShadow;
-border-radius: 0 0 $borderRadius;
+
+.days {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 100%;
+    background: $liteBackground;
+    box-shadow: $boxShadow;
+    border-radius: 0 0 $borderRadius;
 }
 
-.cards{
+.cards {
     display: flex;
     flex-direction: column;
     background: rgba(71, 147, 255, 0.2);
@@ -19,63 +21,73 @@ border-radius: 0 0 $borderRadius;
     transition: 0.3s;
     cursor: pointer;
 
-    .day{
-        margin-bottom:7px;
+    .day {
+        margin-bottom: 7px;
         font-size: 18px;
     }
-    .dayInfo{
+
+    .dayInfo {
         font-size: 14px;
         margin-bottom: 12px;
-        color:$baceColor;
+        color: $baceColor;
     }
-    .img{
+
+    .img {
         margin-bottom: 12px;
     }
-    .dayTemp{
+
+    .dayTemp {
         font-size: 18px;
     }
-    .nightTemp{
+
+    .nightTemp {
         font-size: 18px;
-        color:$baceColor;
+        color: $baceColor;
         margin-bottom: 6px;
     }
-.dayInfo{
-    font-size: 13px;
-color: $baceColor;
-}
-&:hover{
-    box-shadow: 0px 3px 20px rgba(147, 144, 144, 0.28);
-}
+
+    .dayInfo {
+        font-size: 13px;
+        color: $baceColor;
+    }
+
+    &:hover {
+        box-shadow: 0px 3px 20px rgba(147, 144, 144, 0.28);
+    }
 }
 
-.tabs{
+.tabs {
     display: flex;
     justify-content: space-between;
     margin-bottom: 7px;
 }
 
-.cancel, .tab{
-box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
-border-radius: 5px;
-padding: 9px 20px;
-background-color: $liteBackground;
-margin-right: 15px;
-color: $liteColor;
-font-size: 18px;
-display: flex;
-align-items: center;
-justify-content: center;
-cursor: pointer;
+.cancel,
+.tab {
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+    border-radius: 5px;
+    padding: 9px 20px;
+    background-color: $liteBackground;
+    margin-right: 15px;
+    color: $liteColor;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
-.cancel{
+
+.cancel {
     margin-left: 0;
 }
-.tab{
-    &:active{
+
+.tab {
+    &:active {
         background: $primaryColor;
         color: #fff;
     }
 }
-.tabsWrapper{
+
+.tabsWrapper {
     display: flex;
 }

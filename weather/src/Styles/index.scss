@@ -4,17 +4,18 @@
 
 *,
 *:after,
-*:before{
+*:before {
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Montserrat', sans-serif;
+    position: relative;
 }
 
+.globalConteiner {}
 
-
-.conteiner{
+.conteiner {
     max-width: 1200px;
     margin: 0 auto;
     padding-top: 20px;

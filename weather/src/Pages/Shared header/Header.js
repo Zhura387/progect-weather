@@ -9,15 +9,15 @@ const Header = () => {
         { value: 'city-3', label: 'Kiev' }
     ]
 
-    const colorStyles ={
-        control:(styles)=>({
+    const colorStyles = {
+        control: (styles) => ({
             ...styles,
-            backgroundColor:'rgba(71, 147, 255, 0.2)',
-            width:'194px',
-            height:'37px',
-            border:'none',
-            borderRadius:'10px',
-            zIndex:100,
+            backgroundColor: 'rgba(71, 147, 255, 0.2)',
+            width: '194px',
+            height: '37px',
+            border: 'none',
+            borderRadius: '10px',
+            zIndex: 100,
         })
     }
 
