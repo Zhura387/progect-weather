@@ -1,11 +1,29 @@
 import React from 'react';
 import s from './ThisDay.module.scss'
+import { useSelector } from 'react-redux'
+
 const ThisDay = () => {
+    const weather = useSelector((state) => state.weath.value)
+    console.log(weather)
+    // const [appState, setAppState] = React.useState();
+
+    // //  https://api.openweathermap.org/data/2.5/weather?q=minsk&appid=f7d9a1e9d1ca992f7f31ae1dceff8b09
+    
+    // React.useEffect(() => {
+    //     axios.get(`https://api.openweathermap.org/data/2.5/weather?q=minsk&units=metric&lang=ru&appid=f7d9a1e9d1ca992f7f31ae1dceff8b09`)
+    //         .then((resp) => {
+    //             const allPersons = resp.data;
+    //             setAppState(allPersons);
+    //         });
+    // }, [setAppState]);
+    // console.log(appState)
+
+//  {weater.main.description}
     return (
         <div className={s.thisDay}>
             <div className={s.topBlock}>
                 <div className={s.topBlockWrapper}>
-                    <div className={s.thisDayTemp}>20</div>
+                    <div className={s.thisDayTemp}> 20</div>
                     <div className={s.thisDayData}>to day</div>
                 </div>
                 <div><svg width="119" height="119" viewBox="0 0 119 119" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,7 +41,7 @@ const ThisDay = () => {
             </div>
             <div className={s.bottomBlock}>
                 <div className={s.thisDayTime}>time:<span>21:54</span></div>
-                <div className={s.thisDayCity}><span>Minsk</span></div>
+                <div className={s.thisDayCity}><span>minsk</span></div>
             </div>
         </div>
     )

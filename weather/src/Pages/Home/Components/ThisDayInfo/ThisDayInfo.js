@@ -1,9 +1,10 @@
 import React from 'react';
 import s from './ThisDayInfo.module.scss'
+import { useSelector } from 'react-redux'
 
 const ThisDayInfo = () => {
 
-
+    // const weather = useSelector((state) => state.weath.value)
 
     const items = [
        
@@ -38,7 +39,7 @@ const ThisDayInfo = () => {
                 {items.map((item) =>
                     <div key={item.icon_id} className={s.item}>
                         <div className={s.indicator}>
-                            <div><img src={item.icon_id} /></div>
+                            {/* <div><img src={item.icon_id}/></div> */}
                         </div>
                         <div className={s.indicatorName}>{item.name}</div>
                         <div className={s.indicatorValue}>{item.value}</div>
