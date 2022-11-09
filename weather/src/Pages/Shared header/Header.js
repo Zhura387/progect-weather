@@ -1,34 +1,35 @@
 import React from 'react';
 import s from './Header.module.scss'
 import Select from 'react-select'
-import {ModelCssTheme} from '../../Model/ModelCssTheme'
+import ObjectWeather from './ObjectWeather';
 const Header = () => {
 
-const [theme, setTheme] = React.useState('light');
+    const [theme, setTheme] = React.useState('light');
 
-const themeChenge=()=>{
-    setTheme(theme==='light'?'dark':'light')
-    console.log(setTheme)
-}
+    const themeChenge = () => {
+        setTheme(theme === 'light' ? 'dark' : 'light')
+        console.log(setTheme)
+    }
 
-const components = [
-    'body-background',
-    'components-background',
-    'card-background',
-    'card-shadow',
-    'text-color',
-  ];
+    const components = [
+        'body-background',
+        'components-background',
+        'card-background',
+        'card-shadow',
+        'text-color',
+    ];
 
-React.useEffect(() => {
-    return () => {
-        const root = document.querySelector(':root');
-        components.forEach(component => {
-            root.style.setProperty(
-              `--${component}-default`,
-              `var(--${component}-${theme})`
-        )
-}, [theme]);
-    }})
+    React.useEffect(() => {
+        return () => {
+            const root = document.querySelector(':root');
+            components.forEach(component => {
+                root.style.setProperty(
+                    `--${component}-default`,
+                    `var(--${component}-${theme})`
+                )
+            }, [theme]);
+        }
+    })
     const options = [
         { value: 'city-1', label: 'Minsk' },
         { value: 'city-2', label: 'Moscow' },
@@ -38,7 +39,7 @@ React.useEffect(() => {
     const colorStyles = {
         control: (styles) => ({
             ...styles,
-            backgroundColor: 0? '#4F4F4F' :'rgba(71, 147, 255, 0.2)',
+            backgroundColor: 0 ? '#4F4F4F' : 'rgba(71, 147, 255, 0.2)',
             width: '194px',
             height: '37px',
             border: 'none',
@@ -49,9 +50,10 @@ React.useEffect(() => {
     const singleValue = {
         control: (styles) => ({
             ...styles,
-            Color: 0? '#fff' :'#000',
+            Color: 0 ? '#fff' : '#000',
         })
     }
+
 
     return (
         <header className={s.Header}>
@@ -77,11 +79,12 @@ React.useEffect(() => {
                 <div className={s.title}>React weather</div>
             </div>
             <div className={s.wrapper}>
-                <div className={s.chengeTheme} ><svg onClick={()=>themeChenge()} width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div className={s.chengeTheme} ><svg onClick={() => themeChenge()} width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11.6667 4.09792V24.7917C6.83958 24.7917 2.91667 20.9562 2.91667 16.2312C2.91667 13.9562 3.82083 11.8125 5.46875 10.1937L11.6667 4.09792ZM11.6667 0L3.42708 8.10833C1.3125 10.1937 0 13.0667 0 16.2312C0 22.575 5.22083 27.7083 11.6667 27.7083C18.1125 27.7083 23.3333 22.575 23.3333 16.2312C23.3333 13.0667 22.0208 10.1937 19.9062 8.10833L11.6667 0Z" fill="#4793FF" />
                 </svg>
                 </div>
-                <Select defaultValue={options[0]} styles={colorStyles} options={options} />
+                <Select defaultValue={options[0]} styles={colorStyles && singleValue} options={options} />
+                <ObjectWeather />
             </div>
         </header>
     )
